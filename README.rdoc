@@ -17,7 +17,34 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
     * $ cp -f config/~application.example.yml config/application.yml
     * > edit config/application.yml
 6. Test App Localy ... $ rails s
-
+7. Git Commit...
+    * Merge develop ~> master
+    * Create GitHub Repo via https://github.com/new/
+    * $ git remote add GitHub https://github.com/your-username/your_app.git
+    * Push all to GitHub remote
+8. Setup Heroku & Prod Database
+    * Create App on Heroku
+      + $ heroku login
+      + $ cd ~/your_rails_app
+      + $ heroku create
+    * Change App Name via http://dashboard.heroku.com/apps/
+      + "Apps" > {new-app-12345} > "Settings" > "Name"
+      + [Rename] to your unique heroku app name
+      + Copy "Info" > "Git URL:"
+      + $ git remote rm heroku
+      + $ git remote add Heroku git@heroku.com:your-rails-app.git
+      + (Optional) Enter "GitHub Repo"
+    * Setup AWS RDS MySQL Database
+      + Confirm Heroku is Granted AWS RDS Remote Access
+      + $ heroku config:get DATABASE_URL
+      + $ heroku addons:add amazon_rds url=mysql2://masteruser:pass@dbinstance.123endpoint321.amazonaws.com/databasename
+      + $ heroku config:get DATABASE_URL
+      + Confirm New Database Settings      
+9. Deploy to Heroku
+    * Deploy by git push of master to 'Heroku' remote
+    * $ rake figaro:heroku
+    * $ heroku run rake db:create
+10. ENJOY!
 
 
 
@@ -69,6 +96,33 @@ Setup MySQL WorkBench
 
 
 == Roadmap
-* Coming Soon...
+  * Heroku Cloud Hosting
+  * Amazon RDS MySQL Database Support
+
+  * Devise
+    + Devise_Invitable
+
+  * time_zone support
+
+  * mailcatcher
+  * quiet_assets
+  * better_errors
+    + binding_of_caller
+  * meta_request (RailsPanel)
+  
+  * bootstrap  AND/OR  foundation
+
+  * ssl for email
+
+  * cert for domain
+
+  * work on invitation system
+    + allow guests to request signup for BETA
+    + hold email invitations & mark as 'signup'
+    + build web admin panel to send delayed invitations
+      - by scale rate? , by FIFO? , by most shared?
+    + allow social sharing (allow users not yet signed up to get credit and share)
+    + give partial credit to all that referred, full credit to last referrer
+    + beta startup user site?
 
 

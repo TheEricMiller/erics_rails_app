@@ -1,0 +1,29 @@
+== Welcome to Eric's Rails App
+
+This project is to serve as a boilerplate app to clone for a quick starting point with some common practices & tools.
+
+
+
+== Getting Started
+
+1. Coming Soon...
+
+
+
+== Prerequisites
+
+* Coming Soon...
+
+
+
+== Boilerplate Features
+
+* Coming Soon...
+
+
+
+== Roadmap
+
+* Coming Soon...
+
+

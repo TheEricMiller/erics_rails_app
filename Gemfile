@@ -9,19 +9,20 @@ gem 'rails', '3.2.12'
 
 # ===~===~===~===~===~===~===~===~===~===
 # ALL ENVIRONMENTS:
-gem 'sqlite3'
 gem 'figaro'
+
 # ===~===~===~===~===~===~===~===~===~===
 group :development do
-  # NONE... YET
+  gem 'mysql2'
 end
 # ===~===~===~===~===~===~===~===~===~===
 group :production do
-  # NONE... YET
+  # gem 'pg'
+  gem 'mysql2'
 end
 # ===~===~===~===~===~===~===~===~===~===
 group :test do
-  # NONE... YET
+  gem 'sqlite3'
 end
 # ===~===~===~===~===~===~===~===~===~===
 

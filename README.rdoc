@@ -10,11 +10,13 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
 3. Rename / Fix Refrences...
     * http://jakeboxer.com/blog/2012/03/15/changing-a-rails-3-project-name/
 4. Setup Dev Database
-    * Coming Soon...
+    * Grant AWS RDS Remote Access (see below)
+    * $ cp -f config/~database.example.yml config/database.yml
+    * > edit config/database.yml
 5. Setup App Secrets & Email
     * $ cp -f config/~application.example.yml config/application.yml
     * > edit config/application.yml
-
+6. Test App Localy ... $ rails s
 
 
 
@@ -35,15 +37,38 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
 
 
 
+AWS RDS Remote Access
+---------------------
+Amazon requires you to grant access from both your local machine's WAN IP.  You will also need to grant Heroku's application servers authorized access for production.
+  1. SignIn to AWS via http://console.aws.amazon.com/
+  2. Go to "Services" > "RDS"
+  3. Under left menu "Navigation/Databases" > "DB Security Groups" > "default"
+  4. Add CIDR/IP: #.#.#.# (your local pc ip  http://www.whatsmyip.us/)
+  5. Add EC2 Security Group (this is heroku aws id)
+    - aws account id: "098166147350"
+    - ec2 security group: "default"
+
+
+
+Setup MySQL WorkBench
+---------------------
+  * hostname = dbinstance.123endpoint789.us-east-1.rds.amazonaws.com
+  * user = masterusername
+  * pass = password
+  * port = 3306
+
+
 
 == Boilerplate Features
 * 'figaro' ~ https://github.com/laserlemon/figaro
+* 'mysql2' ~ https://github.com/brianmario/mysql2
+
+
+== Tools
 * 'mailcatcher' ~ https://github.com/sj26/mailcatcher
 
 
-
 == Roadmap
-
 * Coming Soon...
 
 

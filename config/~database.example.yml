@@ -1,0 +1,81 @@
+#
+# Remember:
+# Ensure the appropriate gems are defined 
+# in your Gemfile for each environment
+#     gem 'sqlite3'
+#     gem 'pg'
+#     gem 'mysql2'
+#     $ bundle install
+#
+# =======================================
+# =               DEV                   =
+# =======================================
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# AWS RDS ~~~~~~~~~~~~~~~~
+development:
+  adapter: mysql2
+  encoding: utf8
+  host: dbinstance.123endpoint789.us-east-1.rds.amazonaws.com
+  database: appdb_dev
+  pool: 5
+  username: masterusername
+  password: password
+  socket: /tmp/mysql.sock
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# MySQL localhost ~~~~~~~~
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   database: appdb_dev
+#   pool: 5
+#   username: root
+#   password:
+#   socket: /tmp/mysql.sock
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# ORIGINAL ~~~~~~~~~~~~~~~
+# development:
+#   adapter: sqlite3
+#   database: db/development.sqlite3
+#   pool: 5
+#   timeout: 5000
+# =======================================
+# =               TEST                  =
+# =======================================
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# MySQL localhost ~~~~~~~~
+# development:
+#   adapter: mysql2
+#   encoding: utf8
+#   database: appdb_test
+#   pool: 5
+#   username: root
+#   password:
+#   socket: /tmp/mysql.sock
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# ORIGINAL ~~~~~~~~~~~~~~~
+test:
+  adapter: sqlite3
+  database: db/test.sqlite3
+  pool: 5
+  timeout: 5000
+# =======================================
+# =            Production               =
+# =======================================
+# HEROKU ~~~~~~~~~~~~~~~~~
+# Note: This is not needed on Heroku & is (over)written on deployment.
+# production:
+#   adapter: pg
+#   database: localhost
+#   timeout: 5000
+# ~~~~~~~~~~~~~~~~~~~~~~~~
+# ORIGINAL ~~~~~~~~~~~~~~~
+# production:
+#   adapter: sqlite3
+#   database: db/production.sqlite3
+#   pool: 5
+#   timeout: 5000
+# =======================================
+

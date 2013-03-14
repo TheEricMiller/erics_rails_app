@@ -5,20 +5,40 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
 
 
 == Getting Started
+1. Confirm Prerequisites (see below)
+2. Clone the Repository via https://github.com/TheEricMiller/erics_rails_app.git
+3. Rename / Fix Refrences...
+    * http://jakeboxer.com/blog/2012/03/15/changing-a-rails-3-project-name/
+4. Setup Dev Database
+    * Coming Soon...
+5. Setup App Secrets & Email
+    * $ cp -f config/~application.example.yml config/application.yml
+    * > edit config/application.yml
 
-1. Coming Soon...
+
 
 
 
 == Prerequisites
+1. Install Ruby on Rails per http://railsinstaller.org/
+2. SignUp for Heroku Free Scalable Hosting via http://www.heroku.com/
+  * Install Heroku Toolbelt via https://toolbelt.heroku.com/
+3. SignUp for Amazon Web Services via http://aws.amazon.com/
+  * Setup MySQL Instance via http://aws.amazon.com/rds/
+  * (Optional) Install MySQL Workbench from http://www.mysql.com/downloads/workbench/
+  * (Optional) Install MySQL DB Serverlocaly via http://mxcl.github.com/homebrew/
+4. SignUp for GitHub via https://github.com/
+  * (Optional) Install Git GUI from 
+      + http://www.sourcetreeapp.com/
+      + http://mac.github.com/
+      + http://windows.github.com/
 
-* Coming Soon...
 
 
 
 == Boilerplate Features
-
-* Coming Soon...
+* 'figaro' ~ https://github.com/laserlemon/figaro
+* 'mailcatcher' ~ https://github.com/sj26/mailcatcher
 
 
 

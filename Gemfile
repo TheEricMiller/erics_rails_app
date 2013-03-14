@@ -5,7 +5,26 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+
+
+# ===~===~===~===~===~===~===~===~===~===
+# ALL ENVIRONMENTS:
 gem 'sqlite3'
+gem 'figaro'
+# ===~===~===~===~===~===~===~===~===~===
+group :development do
+  # NONE... YET
+end
+# ===~===~===~===~===~===~===~===~===~===
+group :production do
+  # NONE... YET
+end
+# ===~===~===~===~===~===~===~===~===~===
+group :test do
+  # NONE... YET
+end
+# ===~===~===~===~===~===~===~===~===~===
+
 
 
 # Gems used only for assets and not required
@@ -13,6 +32,11 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+
+  # ===~===~===~===~===~===~===~===~===~===
+  # ASSET GEMS HERE:
+  # NONE... YET
+  # ===~===~===~===~===~===~===~===~===~===
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

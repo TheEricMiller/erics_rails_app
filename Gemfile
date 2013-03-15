@@ -14,6 +14,11 @@ gem 'figaro'
 # ===~===~===~===~===~===~===~===~===~===
 group :development do
   gem 'mysql2'
+  gem 'quiet_assets'
+  gem 'better_errors'
+    gem 'binding_of_caller'
+  gem 'meta_request'  # https://chrome.google.com/webstore/detail/railspanel/gjpfobpafnhjhbajcjgccbbdofdckggg
+
 end
 # ===~===~===~===~===~===~===~===~===~===
 group :production do

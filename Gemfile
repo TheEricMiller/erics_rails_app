@@ -12,6 +12,7 @@ gem 'rails', '3.2.12'
 gem 'figaro'
 
 gem 'devise'
+gem 'devise_invitable'
 
 # ===~===~===~===~===~===~===~===~===~===
 group :development do

@@ -11,6 +11,8 @@ gem 'rails', '3.2.12'
 # ALL ENVIRONMENTS:
 gem 'figaro'
 
+gem 'devise'
+
 # ===~===~===~===~===~===~===~===~===~===
 group :development do
   gem 'mysql2'

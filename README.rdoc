@@ -64,6 +64,35 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
 
 
 
+
+== How to Add Users
+open `$ rails c`
+
+#### SET FIRST USER
+_confirmation email will be sent_ 
+  $ User.create!(:email => "admin@domain.com", :password => "changeME", :invitation_limit => "777")
+ 
+_no confirmation email will be sent_
+  $ user = User.new(:email => "admin@domain.com", :password => "changeME", :invitation_limit => "777")
+  $ user.skip_confirmation!
+  $ user.save!  
+
+
+#### INVITE OTHER USER
+  $ User.invite!(:email => "email@domain.com", :invitation_limit => "0") 
+
+
+#### OR IF EXISTING UPDATE _INVITE_LIMIT_
+  $ sql = "update users set invitation_limit=777 where email='email@domain.com' "
+  $ ActiveRecord::Base.connection.execute(sql)
+
+
+### USER ADD NOTES?
+$ User.invite!(:email => "new_user@example.com", :skip_invitation => true)
+
+
+
+
 AWS RDS Remote Access
 ---------------------
 Amazon requires you to grant access from both your local machine's WAN IP.  You will also need to grant Heroku's application servers authorized access for production.

@@ -9,6 +9,20 @@ This project is to serve as a boilerplate app to clone for a quick starting poin
 2. Clone the Repository via https://github.com/TheEricMiller/erics_rails_app.git
 3. Rename / Fix Refrences...
     * http://jakeboxer.com/blog/2012/03/15/changing-a-rails-3-project-name/
+    
+        /app/views/layouts/application.html.erb:
+        /config.ru:
+        /config/application.rb:
+        /config/environment.rb:
+        /config/environments/development.rb:
+        /config/environments/production.rb:
+        /config/environments/test.rb:
+        /config/initializers/secret_token.rb:
+        /config/initializers/session_store.rb:
+        /config/routes.rb:
+        /Rakefile:
+
+    
 4. Setup Dev Database
     * Grant AWS RDS Remote Access (see below)
     * $ cp -f config/~database.example.yml config/database.yml
@@ -122,6 +136,10 @@ Setup MySQL WorkBench
 
 == Tools
 * 'mailcatcher' ~ https://github.com/sj26/mailcatcher
+
+* $ `rvm --create --ruby-version use ruby-9.9@appname`
+* $ `mailcatcher` ~ https://github.com/sj26/mailcatcher
+
 
 
 == Roadmap
